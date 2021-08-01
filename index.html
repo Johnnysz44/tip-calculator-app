@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+    <main>
+        <div class="green-container">
+            <h1 class="splitter">SPLI</br>TTER</h1>
+            <div class="tip-box">
+                <div class="calculator">
+                    <form action="">
+                        <span class="titles">Bill</span>
+                            <input type="text" class="price-box" id="bill" placeholder="0" onchange="calculateTotal()">    
+                        <span class="titles">Select Tip %</span>
+                        <div class="container-btn">
+                            <button class="tipBtn">5%</button>
+                            <button class="tipBtn" >10%</button>
+                            <button class="tipBtn" >15%</button>
+                            <button class="tipBtn" >25%</button>
+                            <button class="tipBtn" >50%</button>
+                            <input class="custom" id="bt-custom" placeholder="Custom" onchange="calculateTotal()"></input>
+                        </div>
+                        <span class="titles number-of-people"> Number of People <zero id="zero">can't be zero</zero></span>
+                        <input type="text" class="price-box" id="num-people" placeholder="0"  onchange="calculateTotal()">
+                    </div>
+                    </form>
+                   
+                <div class="tip-aside">
+                    <div class="tip-amount">
+                        <span class="span-aside">Tip amount </br>  <span id="per-person">/ person</span></span>
+                        <span class="value" id="tip-amount-person"> $0.00</span>
+                    </div>
+
+                    <div class="total">
+                        <span class="span-aside">Total  </br> <span id="per-person">/ person</span> </span>   
+                        <span class="value" id="bill-amount-person">$0.00</span>
+                    </div>
+                    
+                    <div class="btn-reset">
+                        <button class="reset" onclick="reset()">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+

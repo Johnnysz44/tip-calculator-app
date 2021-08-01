@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+.splitter {
+    font-size: 2rem;
+    color: #537275;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    margin-bottom: 2em;
+    font-weight: 700;
+    letter-spacing: .25em;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #C5E4E7;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.green-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tip-box{
+    width: 55rem;
+    height: 27rem;
+    border-radius: .75em;
+    background-color: #ffffff;
+    display: flex;
+    padding: 1em;
+} 
+
+.calculator{
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+}
+
+.tip-aside{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.75fr 1.75fr 2fr;
+    width: 50%;
+    height: 100%;
+    background-color: #01474A;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 0em 1.5em;
+    font-size: 1.4rem;
+}
+
+.value {
+    font-size: 2.4rem;
+    color: #43B7AB;
+    font-weight: bold;
+}
+.reset {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 2em;
+    border-radius: 0.25em;
+    align-items: center;
+    color: #0A7E75;
+    background-color: #00d1b2;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.reset:hover {
+    background-color: #0fffdb;
+}
+
+.btn-reset {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+
+.tip-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+#per-person {
+    font-size: 1.2rem;
+    color: #01abb1;
+}
+
+.titles {
+    color: #036669;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+
+
+.price-box {
+    width: 22rem;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: #96cdd12a;
+    margin-bottom: 1.5rem;
+    border: none;
+    text-align: end;
+    color: #02575a;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+
+.container-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 1.5rem;
+}
+
+.tipBtn {
+    height: 25px;
+    width: 68px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #01474A;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    margin: 4px;
+}
+
+
+ .custom {
+    height: 25px;
+    width: 68px;
+    font-size: 1.5rem;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    margin: 4px;
+     background-color: #C5E4E7;
+     color: #005658;
+     font-weight: bold;
+ }
+
+#bt-custom::placeholder {
+    color: #537275;
+}
+
+.btn-active {
+    background-color: #2ec5ae;
+    color: #01383a;
+    font-weight: bold
+}
+
+.warning {
+    border-color: rgb(255, 145, 0);
+    background-clip: padding-box; /* <---- */
+    box-shadow: inset 0 0 0 .2rem rgb(255, 145, 0); /* <-- 10px spread radius */
+}
+
+.warning-visible {
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 600px) and (min-width:500px){
+    .tip-box{
+        width: 100%;
+    }
+    .calculator, .tip-aside{
+        width: 50%;
+    }
+
+    span:nth-of-type(3)::after  {
+        margin-left: 0em
+    }
+    
+}
+
+@media screen and (max-width:499px){
+    
+    .tip-box{
+        height: auto;
+        width: 100vw;
+        max-width: 425px;
+        min-width: 320px;
+        padding: 1rem;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        font-size: 1.5rem;
+        border-radius: 2em 2em 0 0 ;
+    }
+
+   form{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .price-box {
+       height: 3.5rem;
+       width: 85%;
+   }
+    .container-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    span.tittles {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .tipBtn, .custom {
+        width: 12rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+
+    .calculator {
+        width: 85%;
+        text-align: left;
+    }
+    .reset {
+        height: 3.5rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #01474A;
+    }
+    .splitter{
+        margin-top: 4rem;
+
+    }
+    .tip-aside{
+        width: 80%;
+        height: 80%;
+    }
+
+    #tip-amount-person, #bill-amount-person {
+        font-size: 22px;
+    }
+
+}
+
+
+
+zero {
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+    visibility: hidden;
+}
+
+
+/*
+span:nth-of-type(3)::after  {
+    content: "can't be zero!";
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+    margin-left: .3em
+}*/
